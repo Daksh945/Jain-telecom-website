@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jain Telecom | Mobile Phones & Accessories</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+:root{--bg:#101010;--card:#1a1a1a;--gold:#c9a45c;--white:#f5f2eb;--muted:#aaa49a}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif}
+header{position:sticky;top:0;z-index:10;background:#101010ee;border-bottom:1px solid #ffffff18;padding:16px 7%;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.logo{font:700 25px 'Playfair Display';color:var(--gold)}.logo span{display:block;font:9px 'DM Sans';letter-spacing:4px;color:#aaa}
+nav{display:flex;gap:20px;flex-wrap:wrap}nav a{color:#ddd;text-decoration:none;font-size:13px}nav a:hover{color:var(--gold)}
+button,.btn{cursor:pointer}.cart-btn,.btn{background:var(--gold);color:#111;border:0;padding:12px 18px;border-radius:3px;font-weight:800;text-decoration:none;display:inline-block}
+.hero{min-height:540px;padding:85px 8%;display:flex;align-items:center;background:linear-gradient(90deg,#101010 15%,#101010d9 55%,#10101055),url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=1400') center/cover}
+.hero-content{max-width:590px}.tag,.section-head small{color:var(--gold);letter-spacing:3px;font-size:11px}
+h1{font:700 clamp(44px,7vw,76px)/1.1 'Playfair Display';margin:20px 0}h1 em{color:var(--gold);font-style:normal}
+.hero p,.about p{color:#bbb;line-height:1.8;max-width:470px;font-size:14px}
+.btn-outline{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-left:8px}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:0 8%;position:relative;margin-top:-25px}
+.feature{background:#1b1b1b;padding:24px;text-align:center;border:1px solid #ffffff15}.feature b{color:var(--gold)}.feature p{font-size:12px;color:#aaa;margin-top:7px}
+section{padding:75px 8%}.section-head{text-align:center;margin-bottom:38px}.section-head h2,.contact h2{font:36px 'Playfair Display';margin:12px 0}.section-head p{color:var(--muted);font-size:14px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.product{background:var(--card);border:1px solid #ffffff14;overflow:hidden;transition:.25s}.product:hover{transform:translateY(-4px);border-color:var(--gold)}
+.product img{width:100%;height:205px;object-fit:cover;background:#222}.product-info{padding:18px}.product-info small{color:var(--gold);letter-spacing:2px}.product-info h3{margin:9px 0}.product-info p{color:#aaa;font-size:13px;min-height:36px}.price{font-size:19px;color:var(--gold);font-weight:800;margin:14px 0}.add{width:100%;padding:11px;background:transparent;border:1px solid var(--gold);color:var(--gold);font-weight:bold}.add:hover{background:var(--gold);color:#111}
+.categories,.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.category,.service{padding:24px;background:#1b1b1b;border:1px solid #ffffff15}.category span,.service span{font-size:28px}.category h3{color:var(--gold);margin-top:12px}.category p,.service p{font-size:13px;color:#aaa;margin-top:7px;line-height:1.6}
+.service{border-bottom:2px solid var(--gold)}.service h3{margin:12px 0 7px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.about img{width:100%;height:340px;object-fit:cover}.about h2{font:38px 'Playfair Display';margin:15px 0}
+.contact{text-align:center;background:#191919;border-top:1px solid #ffffff15}.contact p{color:#aaa;line-height:2}
+footer{text-align:center;padding:25px;color:#888;font-size:12px;border-top:1px solid #ffffff15}
+#cartPanel{position:fixed;inset:0;background:#000b;z-index:20;display:none;justify-content:flex-end}.cart{width:min(420px,100%);height:100%;background:#181818;padding:24px;overflow:auto}.cart-head{display:flex;justify-content:space-between}.cart-head button{background:none;color:white;border:0;font-size:26px}.cart-item{display:flex;justify-content:space-between;gap:10px;padding:16px 0;border-bottom:1px solid #ffffff20;font-size:13px}.cart-item button{background:none;border:0;color:var(--gold);padding:0 5px}.cart-total{margin:24px 0;color:var(--gold);font-size:21px}.whatsapp{position:fixed;right:18px;bottom:18px;background:#20c76a;color:white;text-decoration:none;padding:13px 18px;border-radius:30px;z-index:9;font-weight:bold}
+@media(max-width:760px){header{padding:14px 5%;flex-wrap:wrap}nav{order:3;width:100%;gap:16px;overflow:auto;flex-wrap:nowrap}nav a{white-space:nowrap}.hero{min-height:470px;padding:60px 7%}.features{padding:0 7%;grid-template-columns:1fr;margin-top:0}section{padding:58px 7%}.products,.categories,.services{grid-template-columns:repeat(2,1fr)}.about{grid-template-columns:1fr}}
+@media(max-width:480px){.products,.categories,.services{grid-template-columns:1fr}.btn-outline{margin:10px 0 0}.hero{min-height:440px}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">JAIN TELECOM<span>CONNECTING YOUR WORLD</span></div>
+ <nav><a href="#home">Home</a><a href="#products">Products</a><a href="#categories">Categories</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+ <button class="cart-btn" onclick="openCart()">CART (<span id="count">0</span>)</button>
+</header>
+<main>
+<div class="hero" id="home"><div class="hero-content">
+ <div class="tag">WELCOME TO JAIN TELECOM</div><h1>Technology.<br><em>Made Simple.</em></h1>
+ <p>Your local destination for mobile phones and everyday accessories. Discover useful products, friendly assistance and service you can count on.</p>
+ <a href="#products" class="btn" style="margin-top:26px">EXPLORE PRODUCTS</a>
+ <a href="#contact" class="btn btn-outline">CONTACT US</a>
+</div></div>
+<div class="features">
+ <div class="feature"><b>✦ Quality Products</b><p>Mobile essentials selected with care</p></div>
+ <div class="feature"><b>✦ Friendly Service</b><p>Helpful guidance when you need it</p></div>
+ <div class="feature"><b>✦ Great Value</b><p>Everyday technology made easy</p></div>
+</div>
+<section id="products"><div class="section-head"><small>OUR COLLECTION</small><h2>Featured Products</h2><p>Ask us about availability and today's prices.</p></div><div class="products" id="productGrid"></div></section>
+<section id="categories"><div class="section-head"><small>SHOP BY CATEGORY</small><h2>Everything You Need</h2></div>
+ <div class="categories">
+  <div class="category"><span>📱</span><h3>Smartphones</h3><p>Explore phones for your needs</p></div>
+  <div class="category"><span>🎧</span><h3>Audio</h3><p>Earphones and headphones</p></div>
+  <div class="category"><span>🔌</span><h3>Chargers</h3><p>Charging essentials</p></div>
+  <div class="category"><span>🛡️</span><h3>Protection</h3><p>Cases and screen guards</p></div>
+  <div class="category"><span>⌚</span><h3>Smart Gadgets</h3><p>Useful everyday gadgets</p></div>
+  <div class="category"><span>🔋</span><h3>Accessories</h3><p>More mobile essentials</p></div>
+ </div>
+</section>
+<section id="services"><div class="section-head"><small>WHAT WE OFFER</small><h2>Service That Matters</h2><p>Here to help with your mobile needs.</p></div>
+ <div class="services">
+  <div class="service"><span>📲</span><h3>Mobile Purchasing</h3><p>Get help exploring phones that match your requirements and budget.</p></div>
+  <div class="service"><span>🛠️</span><h3>Mobile Assistance</h3><p>Friendly help and guidance for everyday mobile-related needs.</p></div>
+  <div class="service"><span>✨</span><h3>Accessories</h3><p>Cases, screen protection, chargers and other useful accessories.</p></div>
+ </div>
+</section>
+<section><div class="about">
+ <img src="https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=900" alt="Mobile phones and accessories">
+ <div><small style="color:var(--gold);letter-spacing:3px">ABOUT OUR STORE</small><h2>A Small Store.<br>A Big Commitment.</h2>
+ <p>At Jain Telecom, we believe good service matters. We aim to make your shopping experience simple, comfortable and reliable. Whether you're looking for a new mobile phone or an everyday accessory, we're here to help.</p>
+ <a href="#contact" class="btn" style="margin-top:24px">VISIT OUR STORE</a></div>
+</div></section>
+<section class="contact" id="contact"><small style="color:var(--gold);letter-spacing:3px">GET IN TOUCH</small><h2>Let's Connect.</h2>
+ <p>Looking for a mobile phone or an accessory?<br>Contact Jain Telecom today.</p>
+ <a id="contactBtn" href="#" class="btn" style="margin-top:22px">CHAT ON WHATSAPP</a>
+ <p style="margin-top:22px">📍 Jain Telecom, India</p><p>Contact us for enquiries, prices and orders.</p>
+</section>
+</main>
+<div id="cartPanel" onclick="if(event.target===this)closeCart()"><div class="cart">
+ <div class="cart-head"><h2 style="font-family:'Playfair Display'">Your Cart</h2><button onclick="closeCart()">×</button></div>
+ <div id="cartItems"></div><div class="cart-total">Total: ₹<span id="total">0</span></div>
+ <button class="btn" style="width:100%" onclick="checkout()">ORDER ON WHATSAPP</button>
+</div></div>
+<a class="whatsapp" id="floatWA" href="#">WhatsApp ↗</a>
+<footer>© 2026 JAIN TELECOM. ALL RIGHTS RESERVED.<br>Connecting Your World.</footer>
+<script>
+// IMPORTANT: Replace this with the shop owner's WhatsApp number.
+// Format: 91 followed by the 10-digit mobile number, without + or spaces.
+const PHONE = "91XXXXXXXXXX";
+const products = [
+ {name:"Smartphones",desc:"Explore phones for every budget.",price:0,img:"https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=600"},
+ {name:"Wireless Earbuds",desc:"Enjoy music on the go.",price:0,img:"https://images.unsplash.com/photo-1606220945770-b5b6c2c55bf1?w=600"},
+ {name:"Fast Chargers",desc:"Everyday charging essentials.",price:0,img:"https://images.unsplash.com/photo-1583394838336-acd977736f90?w=600"},
+ {name:"Mobile Covers",desc:"Protection and style for your phone.",price:0,img:"https://images.unsplash.com/photo-1601593346740-925612772716?w=600"},
+ {name:"Screen Protectors",desc:"Ask about available screen guards.",price:0,img:"https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?w=600"},
+ {name:"Power Banks",desc:"Portable power for busy days.",price:0,img:"https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=600"}
+];
+let cart=[];
+const grid=document.getElementById('productGrid');
+products.forEach((p,i)=>{
+ const card=document.createElement('article');card.className='product';
+ card.innerHTML=`<img src="${p.img}" alt="${p.name}" loading="lazy"><div class="product-info"><small>JAIN TELECOM COLLECTION</small><h3>${p.name}</h3><p>${p.desc}</p><div class="price">Ask for price</div><button class="add" onclick="addToCart(${i})">ADD TO ENQUIRY CART</button></div>`;
+ grid.appendChild(card);
+});
+function addToCart(i){const found=cart.find(x=>x.i===i);if(found)found.qty++;else cart.push({i,qty:1});renderCart();document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);}
+function renderCart(){
+ const el=document.getElementById('cartItems');
+ if(!cart.length){el.innerHTML='<p style="color:#aaa;margin-top:25px">Your cart is empty. Add products to make an enquiry.</p>';return;}
+ el.innerHTML=cart.map(x=>`<div class="cart-item"><span>${products[x.i].name} × ${x.qty}</span><span><button onclick="changeQty(${x.i},-1)">−</button> <button onclick="changeQty(${x.i},1)">+</button> <button onclick="removeItem(${x.i})">Remove</button></span></div>`).join('');
+}
+function changeQty(i,n){const x=cart.find(x=>x.i===i);if(!x)return;x.qty+=n;if(x.qty<=0)cart=cart.filter(y=>y.i!==i);document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart();}
+function removeItem(i){cart=cart.filter(x=>x.i!==i);document.getElementById('count').textContent=cart.reduce((s,x)=>s+x.qty,0);renderCart();}
+function openCart(){renderCart();document.getElementById('cartPanel').style.display='flex';}
+function closeCart(){document.getElementById('cartPanel').style.display='none';}
+function waLink(message){return 'https://wa.me/'+PHONE+'?text='+encodeURIComponent(message);}
+function checkout(){
+ if(!cart.length){alert('Your enquiry cart is empty.');return;}
+ const lines=cart.map(x=>products[x.i].name+' x '+x.qty).join('\n');
+ window.open(waLink('Hello Jain Telecom! I am interested in:\n'+lines+'\nPlease share prices and availability.'),'_blank');
+}
+document.getElementById('contactBtn').href=waLink('Hello Jain Telecom! I would like to know more about your products.');
+document.getElementById('floatWA').href=waLink('Hello Jain Telecom! I have an enquiry.');
+</script>
+</body>
+</html>
